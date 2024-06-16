@@ -1,0 +1,36 @@
+PBO
+
+Bedanya prosedural dgn PBO, prosedur variabel array fungsinya terpisan, kalau di PBO disimpan di 1 tempat yaitu Classs
+
+Class = Design / Template, yang dapat digunakan object; class mendefinisikan object
+Object = variabel hasil instansiasi/wujud/representasi dari class
+
+berisi :
+	-Properti / Atribut = data pada class (variabel/array dll, dapat lebih dri 1), dapat diisi/diubah setelah representasi object 
+
+
+	-Method / Behaviour = tindakan yg dapat dilakukan, method bs dijalankan setelah instansiasi object dari class dapat void ataupun return. Dapat nampung parameter, dan bisa lebih dari 1 method.
+
+ex. class mobil; properti : warna, jenis, tipe, banyak ban, dll
+method : tambah kecepatan, kurangi kec, belok kiri kanan.
+
+Properti dalam suatu object dari class pasti dapat berbeda, sedangkan methodnya pasti sama. Setiap object dari class dapat melakukan segala method 
+
+
+
+
+
+
+Constructor = mmethod khusus/magic otomatis tereksekusi saat instansiasi object (yang otomatis pertama kali di panggil, persiapan data - mengisi properti data)
+ biasanya untuk statement conn database, dan nama construkctor biasnaya sama seperti class
+
+Destructor = kebalikan - method dijalankan jika object dihapus
+biasanya close database, dapat berguna jika ingin menjalankan perintah terntu sebelum object dihapus: Bahasa Java gapunya destructor karena garbage collector (hapus object gakepakai)
+
+ex. Constructor - Menghidupkan Mobil atau tampil pesan selamat datang. status semacamnya
+constructor(warna,tipe,tipe) --- berisi parameter untuk ngisi properti
+	properti blaalba
+	mehotd balalabla
+ketika selesai :
+Destructor - Mematikan Mobil, atau tampilkan pesan terimakasih
+
