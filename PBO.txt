@@ -36,3 +36,33 @@ constructor(warna,tipe,tipe) --- berisi parameter untuk ngisi properti
 ketika selesai :
 Destructor - Mematikan Mobil, atau tampilkan pesan terimakasih
 
+
+===========================================================================================================================================================================================
+===========================================================================================================================================================================================
+
+
+Setter, method yang dibuat untuk mengubah/isi nilai pada property
+1 stter 1 property jadi set_WarnaMobil
+bersifat void
+
+Getter, mengambil isi nilai dari properti
+1 getter 1 property jadi get_WarnaMobil
+bersifat return
+
+Setter getter penting untuk
+	-keamanan data (visibility - access modifier)
+	-mudah kontrol property method
+	-classs fleksibel - akses penuh property method
+	-dapat ganti sebagian code tanpa takut berdampak dgn code lain
+
+Data dari class harus diproteksi, yang bisa merubah properti hanyalah pemiliknya sendiri
+setWarnaMobil(data)
+getWarnaCat()->return
+setWarnaVelgDepanDanBelakang(data1,data2)
+getWarnaVelgDepanDanBelakang()
+
+
+===========================================================================================================================================================================================
+===========================================================================================================================================================================================
+
+
