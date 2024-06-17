@@ -65,4 +65,36 @@ getWarnaVelgDepanDanBelakang()
 ===========================================================================================================================================================================================
 ===========================================================================================================================================================================================
 
+Konsep Paradigma PBO
+4 konsep paradigma kenapa perlu PBO 
+dari inheritance,encasuplation,polymorphism, dan abstrraction
 
+Inheritance(Pewarisan) adalah 
+didefinisikan saat membuat class, 1 class bisa banyak keturunan, 
+banyak class bisa jadi hasil keturunan 1 class
+
+class orangTua harus dibuat  lebih dulu sebelum class anakPewaris
+anakPewaris akan memiliki semua property dan method dari orangTua
+juga dapat memiliki property dan method selain dari orangTua
+
+Kenapa perlu inheritance ? 
+	-menghindari kode duplikat
+	-kemudahan pembuatan class spesifik
+	dapat membuat program kompleks dengan kode yang tidak terlalu kompleks
+
+Analogi:
+tanpa inherintance
+
+class Mobil
+property : warnaCat, jenisMobil
+method: tambahKec, kurangKec
+
+classMobilSport
+property: warnaCat, jenisMobil, statusTurbo*
+method: tambahKec, kurangKec, hidupkanTurbo*
+
+dengan inheritance
+
+class mobilSport --- class spesifik,
+property : statusTurbo
+method: hidupkanTurbo
