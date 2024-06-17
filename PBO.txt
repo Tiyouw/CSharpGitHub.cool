@@ -171,3 +171,72 @@ objSportUdin => tambahKec(2) ada parameter
 ===========================================================================================================================================================================================
 ===========================================================================================================================================================================================
 
+Enkapsulasi (Encapsulation) 
+metode untuk mengatur struktur class dengan cara menyembunyikan alur kerja dari class tersebut
+
+struktur class = data dari class (property dan method)
+
+mana yang bisa dibaca, mana yg bisa di write, mana yg bs dua duanya
+untuk keamanan (information hiding) jadi property & method bisa diakses
+
+Manfaat :
+	-memilih mana prop dan method yg bs diakses
+	-menghalangi kode program lain untuk mengubah property tertentu,
+	class terintegrasi dan menghindari kesalahan
+	-pembatasan hak akses berguna saat membuat program dengan tim, 
+	setiap anggota tim dapat memnbuat nama data member dan nama member function yang sama
+	selama di class yang berbeda nanti diakhir sisa di merge
+	-dapat merancang class yang menyediakan property dan method khusus yang ditujukan
+	untuk akses luar
+
+analogi:
+Motor 
+kuncinya ada di Adi, maka Doni Edo gabisa make
+kalau kuncinya ada Adi dan Doni, maka Edo aja yg gabisa make. inilah enkapsulasi.
+
+keyword:
+	-Public
+	Seluruh kode program di luar class bisa diakses, termasuk class keturunan
+	-Private
+	metod dan property tidak bisa diakses dari luar class termasuk turunan, 1 1nya adlah class itu sendiri
+	-Protected
+	Propery method tidak bisa diakses diluar tapi bisa diakses class Turunan.
+	bedanya sm private cmn meskipun udah diturunkan tetep bisa diakses sm turunannya. 
+	sedangkan private cmn dirinya sendiri aja atau yg diberikan kepercayaan.
+
+analogi :
+
+class Mobil
+property : warnaCat, jenisMobil
+method: tambahKec, kurangKec
+
+classMobilSport
+property: warnaCat, jenisMobil, statusTurbo*
+method: tambahKec, kurangKec, hidupkanTurbo*
+
+
+PUBLIC
+objMobilAdi=>cat=hijau \\ bisa 
+set cat (hijau) \\ bisa 
+
+
+objMobiSportlUdin=>cat=hijau \\bisa 
+set cat (hijau) \\ bisa 
+
+
+PRIVATE
+objMobilAdi=>cat=hijau \\ gabisa 
+set cat (hijau) \\ bisa, cmn bs dipanggil dri dalam class induk
+
+
+objMobiSportlUdin=>cat=hijau \\ gabisa
+set cat (hijau) \\ gabisa
+
+
+PROTECTED
+objMobilAdi=>cat=hijau \\ gabisa 
+set cat (hijau) \\ bisa, dipanggil dri dalam class induk
+
+
+objMobiSportlUdin=>cat=hijau \\ gabisa
+set cat (hijau) \\ bisa, dipanggil dri dalam class turunan
