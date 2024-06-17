@@ -98,3 +98,76 @@ dengan inheritance
 class mobilSport --- class spesifik,
 property : statusTurbo
 method: hidupkanTurbo
+
+===========================================================================================================================================================================================
+===========================================================================================================================================================================================
+
+Overiding (replace atau menimpa dengan versi baru)
+method dari class induk (superclass) yang ditulis kembali pada anak (subclass)
+karena ada yang method dari superclass tidak sesuai jika diterapkan pada subclass
+
+aturan overiding:
+	-parameter overiding di subclass harus sama dgn parameter dan return pada superclass
+	termasuk URUTAN dan BANYAK PARAMETER serta Tipe data return
+	-hak akses pada overiding subclass tidak boleh lebih ketat dibanding superclass
+
+Membuat ulang method tertentu dari superclass menjadi versi baru 
+yang menyesuaikan kebutuhan subclass
+
+Overloading (remake atau memperbarui dengan parameter/statement yang baru)
+karena ada method dari superclass yang perlu dibuat lebih fleksibel menyesuaikan
+kebutuhan anak, misal ada nasi, lauk, minum; pada anak membutuhkan parameter nasi dan lauk
+karena tiap anak pasti nasi dan lauknya beda.
+
+aturan overloading : 
+	-paramater harus beda, termasuk urutan dan banyaknya
+	-aturan hak akses pada anak boleh lebih ketat daripada orangTua, karena instansiasinya
+	didapatkan dari anak
+
+dibuat untuk menambahkan sistem kerja method anak tertentu yang sama dengan induk,
+menjadi method yang lebih spesifik - menyesuaikan kebutuhan anak (fleksibel)
+
+Keuntungan overide-load:
+	-method induk tidak akan berubah
+	-memiliki fungsi yang lebih fleksibel untuk subclass
+	-subclass tidak perlu menggunakan method dari superclass yg sdh di overide-load
+	jika kita ubah caramakan,ubahparameternya otomatis sudah menjadi kendali subclass
+	anak itu sendiri.
+
+analogi:
+OVERRIDING, PARAMETER HARUS SAMA, SEMUANYA SAMA, 
+class mobil
+cetakDataMobil():
+	=> cetakwarrnacat,jenismobil,tipe
+
+class mobilSport
+cetakDataMobil():
+	=> cetakwarrnacat,jenismobil,tipe, banyakban*, status turbo*
+
+misal objSportUdin("bla","bla")
+objSportUdin => cetakDataMobil() ---- maka akan cek ke class mobilSport dulu apa ada
+									method tersebut, kalau ada pake itu, kalau gaada cari di
+									class induk (mobil)
+
+OVERLOADING, parameter beda,
+class mobil
+tambahKec():
+	=> kecepatan += 1
+
+class mobilSport
+tambahKec(N):
+	=> kecepatan += N
+
+misal objSportUdin("bla","bla")
+objSportUdin => tambahKec() tanpa parameter
+							---- maka akan cek ke class mobilSport dulu apa ada
+								method tersebut, kalau ada pake itu, kalau gaada cari di
+								class induk (mobil)  jadi ini nanti pake tambahKec()
+								di class mobil
+objSportUdin => tambahKec(2) ada parameter
+							---- maka pake yang di mobilSport karena ada parameter yg sesuai
+
+
+===========================================================================================================================================================================================
+===========================================================================================================================================================================================
+
