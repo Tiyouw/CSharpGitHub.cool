@@ -27,9 +27,8 @@ namespace PBO//deklarasi ruang lingkup objek
 
         public void print()//digunakan agar metode tidak mengembalikan nilai
         {
-            Console.WriteLine("Merk : " + this.merk);//menampilkan properti menjadi
-            beberapa baris
-        Console.WriteLine("Jenis : " + this.jenis);
+            Console.WriteLine("Merk : " + this.merk);//menampilkan properti menjadi beberapa baris
+            Console.WriteLine("Jenis : " + this.jenis);
             Console.WriteLine("HP : " + this.hp);
             Console.WriteLine("\n");//spacing pada hasil running
         }
